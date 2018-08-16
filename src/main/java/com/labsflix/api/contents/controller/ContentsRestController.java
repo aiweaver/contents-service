@@ -23,14 +23,15 @@ public class ContentsRestController {
 		this.contentsService = contentsService;
 	}
 
-	@RequestMapping(path="/contents", method=RequestMethod.GET, name="getContents")
+	@GetMapping("/contents")
 	public List<Content> getContents(@RequestParam(value = "category") String category) {
 		logger.debug("getContents() called!!");
 		return contentsService.getContents(category);
 	}
 
-	@RequestMapping(path="/contents", method=RequestMethod.POST, name="addContents")
+	@PostMapping("/contents")
 	public int addContents(@RequestBody Content content) {
+		logger.debug("addContents() called!!");
 		return contentsService.addContent(content);
 	}
 

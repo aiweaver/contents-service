@@ -5,10 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.labsflix.api.category.service.CategoryService;
 import com.labsflix.api.category.vo.Category;
@@ -26,14 +23,14 @@ public class CategoryRestController {
 		this.categoryService = categoryService;
 	}
 
-	@RequestMapping(path="/categories", method=RequestMethod.GET, name="getCategories")
-	public List<Category> getCategories() throws Exception {
+	@GetMapping("/categories")
+	public List<Category> getCategories() {
 		logger.debug("getCategories() called!!");
 		return categoryService.getCategories();
 	}
 
-	@RequestMapping(path="/categories/{id}", method=RequestMethod.GET, name="getCategory")
-	public Category getCategory(@PathVariable(value = "id") String id) throws Exception {
+	@GetMapping("/categories/{id}")
+	public Category getCategory(@PathVariable(value = "id") String id) {
 		logger.debug("getCategory() called!!");
 		return categoryService.getCategory(id);
 	}
