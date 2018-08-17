@@ -1,4 +1,4 @@
-package com.labsflix.api.contents.episode.vo;
+package com.labsflix.api.domain;
 
 import java.util.List;
 

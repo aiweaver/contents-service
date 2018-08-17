@@ -4,12 +4,3 @@ server:
 spring:
   application:
     name: contents-service
-  datasource:
-    initialization-mode: always
-    platform: h2
-    url: jdbc:h2:mem:mediadb;
-    username: sa
-    password: null
-  h2:
-    console:
-      enabled: true

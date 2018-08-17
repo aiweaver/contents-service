@@ -2,11 +2,11 @@ package com.labsflix.api.category.service;
 
 import java.util.List;
 
-import com.labsflix.api.category.dao.CategoryMapper;
+import com.labsflix.api.category.mapper.CategoryMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.labsflix.api.category.vo.Category;
+import com.labsflix.api.domain.Category;
 
 @Service("categoryService")
 public class CategoryService {

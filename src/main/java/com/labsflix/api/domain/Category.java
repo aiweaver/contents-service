@@ -1,4 +1,4 @@
-package com.labsflix.api.category.vo;
+package com.labsflix.api.domain;
 
 public class Category {
 

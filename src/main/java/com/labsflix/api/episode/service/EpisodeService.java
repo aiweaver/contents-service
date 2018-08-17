@@ -1,9 +1,9 @@
-package com.labsflix.api.contents.episode.service;
+package com.labsflix.api.episode.service;
 
-import com.labsflix.api.contents.vo.Content;
-import com.labsflix.api.contents.episode.dao.EpisodeMapper;
-import com.labsflix.api.contents.episode.vo.Episode;
-import com.labsflix.api.contents.episode.vo.Season;
+import com.labsflix.api.domain.Content;
+import com.labsflix.api.episode.mapper.EpisodeMapper;
+import com.labsflix.api.domain.Episode;
+import com.labsflix.api.domain.Season;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.labsflix.api.contents.vo;
+package com.labsflix.api.domain;
 
 public class Content {
 

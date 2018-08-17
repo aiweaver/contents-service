@@ -1,12 +1,14 @@
-package com.labsflix.api.contents.episode.dao;
+package com.labsflix.api.episode.mapper;
 
-import com.labsflix.api.contents.episode.vo.Episode;
-import com.labsflix.api.contents.vo.Content;
+import com.labsflix.api.domain.Episode;
+import com.labsflix.api.domain.Content;
 import org.apache.ibatis.annotations.*;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Mapper
+@Repository
 public interface EpisodeMapper {
 
     @Select("select * from contents where title like concat('%',#{title},'%')")
@@ -14,7 +16,7 @@ public interface EpisodeMapper {
             @Result(property = "hasEpisodes", column = "has_episodes"),
             @Result(property = "regDate", column = "reg_date")
     })
-    public List<Content> findByTitle(String title);
+    List<Content> findByTitle(String title);
 
     @Select("select * from contents where id=#{id}")
     @Results({

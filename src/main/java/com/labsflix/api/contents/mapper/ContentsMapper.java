@@ -1,11 +1,13 @@
-package com.labsflix.api.contents.dao;
+package com.labsflix.api.contents.mapper;
 
-import com.labsflix.api.contents.vo.Content;
+import com.labsflix.api.domain.Content;
 import org.apache.ibatis.annotations.*;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Mapper
+@Repository
 public interface ContentsMapper {
 
     @Select("select * from contents where category=#{category}")

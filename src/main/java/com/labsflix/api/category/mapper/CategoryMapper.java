@@ -1,12 +1,14 @@
-package com.labsflix.api.category.dao;
+package com.labsflix.api.category.mapper;
 
-import com.labsflix.api.category.vo.Category;
+import com.labsflix.api.domain.Category;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Mapper
+@Repository
 public interface CategoryMapper {
 
     @Select("select * from categories")
