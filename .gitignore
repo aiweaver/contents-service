@@ -55,3 +55,4 @@ buildNumber.properties
 sftp-config.json
 
 .idea/
+contents-service.iml
